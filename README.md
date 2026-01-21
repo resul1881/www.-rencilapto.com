@@ -1,1 +1,1 @@
-# www.-ogrenc,laptop.com
+# www.-ogrencı,laptop.com
