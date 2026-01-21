@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ÖğrenciLaptop | Bütçe Laptop Rehberleri + Karşılaştırmalar (2026)</title>
+  <meta name="description" content="Öğrenciler için bütçe laptop rehberleri, karşılaştırmalar ve aksesuar önerileri. Affiliate + AdSense altyapısı hazır. Sarı-siyah profesyonel tasarım." />
+  <meta name="theme-color" content="#0b0d10">
+  <meta name="robots" content="index,follow">
+  <style>
+    :root{
+      --bg:#07090c;
+      --panel:#0f1319;
+      --panel2:#0b0f15;
+      --text:#f5f7fb;
+      --muted:#b7c0cc;
+      --line:rgba(255,255,255,.10);
+      --yellow:#ffd400;
+      --yellow2:#ffea70;
+      --ok:#27d07d;
+      --shadow: 0 18px 50px rgba(0,0,0,.55);
+      --radius:18px;
+      --radius2:14px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 10% 10%, rgba(255,212,0,.12), transparent 55%),
+        radial-gradient(900px 600px at 80% 20%, rgba(255,212,0,.10), transparent 55%),
+        linear-gradient(180deg, #05060a 0%, #070a10 40%, #05060a 100%);
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1160px;margin:0 auto;padding:0 18px}
+    .topbar{
+      position:sticky;top:0;z-index:60;
+      backdrop-filter: blur(10px);
+      background: rgba(5,6,10,.70);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{
+      width:40px;height:40px;border-radius:12px;
+      background: radial-gradient(circle at 30% 30%, var(--yellow2), var(--yellow));
+      box-shadow: 0 10px 30px rgba(255,212,0,.15);
+      display:grid;place-items:center;color:#111;font-weight:900;
+    }
+    .brand b{letter-spacing:.3px}
+    .menu{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .chip{
+      padding:10px 12px;border-radius:999px;border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      transition:.2s;
+      font-weight:700;
+    }
+    .chip:hover{border-color:rgba(255,212,0,.55);transform:translateY(-1px)}
+    .cta{
+      padding:11px 14px;border-radius:999px;
+      background: linear-gradient(180deg, var(--yellow2), var(--yellow));
+      color:#111;font-weight:900;border:0;
+      box-shadow: 0 14px 35px rgba(255,212,0,.18);
+      cursor:pointer;
+      white-space:nowrap;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero{padding:34px 0 14px;}
+    .heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:stretch;}
+    @media (max-width: 980px){ .heroGrid{grid-template-columns:1fr;} }
+
+    .heroLeft{padding:20px}
+    .badge{
+      display:inline-flex;gap:8px;align-items:center;
+      padding:7px 11px;border-radius:999px;
+      border:1px solid rgba(255,212,0,.35);
+      background: rgba(255,212,0,.08);
+      color:var(--yellow2);
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+    h1{
+      margin:12px 0 10px;
+      font-size: clamp(26px, 3.6vw, 46px);
+      line-height:1.12;
+      letter-spacing:-.4px;
+    }
+    .sub{color:var(--muted);max-width:70ch;margin:0 0 16px}
+    .heroBtns{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      padding:12px 14px;border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      font-weight:900;cursor:pointer;transition:.2s;
+    }
+    .btn:hover{border-color:rgba(255,212,0,.55);transform:translateY(-1px)}
+    .btn.primary{
+      border:0;background: linear-gradient(180deg, var(--yellow2), var(--yellow));
+      color:#111;
+    }
+
+    .heroStats{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+    @media (max-width: 520px){ .heroStats{grid-template-columns:1fr} }
+    .stat{padding:12px;border-radius:14px;border:1px solid var(--line);background: rgba(0,0,0,.22);}
+    .stat b{display:block;font-size:18px}
+    .stat span{color:var(--muted);font-size:13px}
+
+    .heroRight{display:flex;flex-direction:column;}
+    .imgBox{padding:14px;height:100%;position:relative;}
+    .heroImg{
+      width:100%;height:100%;min-height:290px;
+      border-radius:16px;border:1px solid rgba(255,255,255,.10);
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65)),
+        url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1600&q=75') center/cover no-repeat;
+      box-shadow: 0 20px 60px rgba(0,0,0,.55);
+    }
+    .float{position:absolute;left:22px;bottom:22px;right:22px;display:flex;gap:10px;flex-wrap:wrap;}
+    .pill{
+      padding:9px 11px;border-radius:999px;
+      background: rgba(0,0,0,.55);
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;font-weight:900;
+    }
+
+    .section{padding:18px 0}
+    .titleRow{display:flex;align-items:end;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+    h2{margin:0;font-size:22px;letter-spacing:-.2px}
+    .hint{color:var(--muted);font-size:13px}
+    .muted{color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+    @media (max-width: 980px){ .grid{grid-template-columns:1fr} }
+    .tile{padding:16px}
+    .kicker{color:var(--yellow2);font-weight:900;font-size:12px;letter-spacing:.7px;text-transform:uppercase}
+    .tile h3{margin:6px 0 8px;font-size:18px}
+    .tile p{margin:0;color:var(--muted)}
+    .tile ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    .tile li{margin:6px 0}
+    .mini{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+    .tag{
+      font-size:12px;font-weight:900;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(255,212,0,.30);
+      background: rgba(255,212,0,.08);
+      color:var(--yellow2);
+    }
+    .tag.ok{border-color:rgba(39,208,125,.35);background:rgba(39,208,125,.08);color:rgba(170,255,215,.95)}
+
+    /* İçerik alanı */
+    .content{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;}
+    @media (max-width: 980px){ .content{grid-template-columns:1fr} }
+    .postList{padding:16px}
+    .post{
+      padding:14px;border-radius:16px;border:1px solid var(--line);
+      background: rgba(0,0,0,.20);
+      margin-bottom:12px;transition:.2s;
+    }
+    .post:hover{border-color:rgba(255,212,0,.55);transform:translateY(-1px)}
+    .post b{display:block;margin:4px 0 6px}
+    .post small{color:var(--muted)}
+    .post .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+    .pill2{
+      font-size:12px;font-weight:900;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      color:#fff;
+    }
+    .pill2.y{border-color:rgba(255,212,0,.28);background:rgba(255,212,0,.08);color:var(--yellow2)}
+    .sidebar{padding:16px}
+    .box{
+      padding:14px;border-radius:16px;border:1px solid var(--line);
+      background: rgba(0,0,0,.22);
+      margin-bottom:12px;
+    }
+    .box h4{margin:0 0 8px}
+    .box p{margin:0;color:var(--muted)}
+    .searchRow{display:flex;gap:8px;margin-top:10px}
+
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      outline:none;
+    }
+    input:focus, textarea:focus, select:focus{border-color: rgba(255,212,0,.55)}
+    textarea{min-height:110px;resize:vertical}
+    .smallBtn{
+      padding:12px 12px;border-radius:14px;
+      border:0;background: linear-gradient(180deg, var(--yellow2), var(--yellow));
+      color:#111;font-weight:900;cursor:pointer;
+      white-space:nowrap;
+    }
+
+    /* Affiliate kartları */
+    .affGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    @media (max-width: 1100px){ .affGrid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width: 560px){ .affGrid{grid-template-columns:1fr} }
+    .aff{padding:14px}
+    .aff .img{
+      height:120px;border-radius:14px;border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65)),
+      url('https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1200&q=70') center/cover no-repeat;
+      margin-bottom:10px;
+    }
+    .aff b{display:block}
+    .aff span{color:var(--muted);font-size:13px}
+    .aff a{
+      display:inline-flex;margin-top:10px;
+      padding:10px 12px;border-radius:12px;
+      border:1px solid rgba(255,212,0,.30);
+      background: rgba(255,212,0,.08);
+      font-weight:900;color:var(--yellow2);
+    }
+    .disclosure{
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size:12px;
+    }
+
+    /* Karşılaştırma tablo */
+    table{width:100%;border-collapse:separate;border-spacing:0;margin-top:10px;overflow:hidden;border-radius:14px;border:1px solid rgba(255,255,255,.12)}
+    th,td{padding:10px 10px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;vertical-align:top}
+    th{background:rgba(255,255,255,.05);font-size:13px}
+    tr:last-child td{border-bottom:0}
+    .score{font-weight:900;color:var(--yellow2)}
+    .ok{color:rgba(170,255,215,.95);font-weight:900}
+    .warn{color:rgba(255,234,112,.95);font-weight:900}
+
+    /* Reklam alanı (demo) */
+    .adslot{
+      padding:14px;border-radius:16px;border:1px dashed rgba(255,212,0,.35);
+      background: rgba(255,212,0,.06);
+      color: rgba(255,234,112,.95);
+      font-weight:900;
+    }
+    .note{font-size:12px;color:rgba(183,192,204,.85)}
+
+    /* Footer */
+    footer{
+      padding:22px 0 30px;color:var(--muted);
+      border-top:1px solid var(--line);
+      margin-top:18px;
+    }
+    .footerGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;}
+    @media (max-width: 980px){ .footerGrid{grid-template-columns:1fr} }
+    .legal a{color:var(--yellow2);font-weight:900}
+
+    /* Modal */
+    .modalOverlay{position:fixed;inset:0;display:none;place-items:center;background:rgba(0,0,0,.72);z-index:120;padding:18px}
+    .modalBody{max-width:900px;width:100%;padding:16px}
+
+    /* Kopyala buton */
+    .copyBtn{
+      padding:10px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      font-weight:900;cursor:pointer;
+    }
+    .copyBtn:hover{border-color:rgba(255,212,0,.55)}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top">
+          <div class="logo">₺</div>
+          <div>
+            <b>ÖğrenciLaptop</b><br><span class="hint">Bütçe Laptop • Aksesuar • Rehber</span>
+          </div>
+        </a>
+        <div class="menu">
+          <a class="chip" href="#rehberler">Rehberler</a>
+          <a class="chip" href="#oneriler">Öneriler</a>
+          <a class="chip" href="#karsilastir">Karşılaştırma</a>
+          <a class="chip" href="#adsense">AdSense</a>
+          <button class="cta" onclick="scrollToId('oneriler')">Para Kazanacak Linkler</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div class="heroGrid">
+        <div class="card heroLeft">
+          <div class="badge">⚡ Affiliate + içerik + AdSense altyapısı hazır</div>
+          <h1>Öğrenciler için <span style="color:var(--yellow2)">bütçe laptop</span> rehberi — tıklama & satış odaklı</h1>
+          <p class="sub">
+            Bu sayfa; <b>Affiliate linkleri</b> (satış ortaklığı), <b>AdSense reklam alanları</b> ve <b>içerik/SEO düzeni</b> ile para kazanmak üzere tasarlandı.
+            WhatsApp numarası eklenmedi (sen eklemek istersen sonradan).
+          </p>
+          <div class="heroBtns">
+            <button class="btn primary" onclick="scrollToId('oneriler')">🛒 Öneri Linklerini Düzenle</button>
+            <button class="btn" onclick="scrollToId('rehberler')">📚 5 Hazır İçerik</button>
+            <button class="btn" onclick="scrollToId('yayina')">🚀 Yayınla</button>
+          </div>
+
+          <div class="heroStats">
+            <div class="stat"><b>Gelir Modeli</b><span>Affiliate + AdSense</span></div>
+            <div class="stat"><b>İçerik</b><span>5 özgün rehber hazır</span></div>
+            <div class="stat"><b>Tek Dosya</b><span>index.html</span></div>
+          </div>
+
+          <div class="disclosure">
+            <b>Affiliate Açıklaması:</b> Bu sayfada “satış ortaklığı/affiliate” linkleri bulunabilir.
+            Linklerden alışveriş yapılırsa komisyon kazanılabilir (fiyat değişmez).
+          </div>
+        </div>
+
+        <div class="card heroRight">
+          <div class="imgBox">
+            <div class="heroImg" role="img" aria-label="laptop ve çalışma masası görseli"></div>
+            <div class="float">
+              <div class="pill">✅ Mobil Uyumlu</div>
+              <div class="pill">⚡ Hızlı</div>
+              <div class="pill">📈 Dönüşüm Odaklı</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="oneriler" class="section">
+      <div class="titleRow">
+        <h2>Öneriler (Affiliate kartları) — hazır</h2>
+        <div class="hint">Aşağıdaki linkleri kendi affiliate linklerinle değiştirince para kazanmaya başlar.</div>
+      </div>
+
+      <div class="card" style="padding:16px;margin-bottom:14px">
+        <div class="kicker">Hızlı Kurulum</div>
+        <h3 style="margin:6px 0 6px">Affiliate linklerini 2 dakikada ekle</h3>
+        <p class="muted" style="margin:0">
+          1) Satış ortaklığı programından link al → 2) Aşağıdaki “LINK:” alanına yapıştır → 3) Kaydet.
+        </p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+          <div class="box" style="margin:0">
+            <b>Örnek link biçimi</b>
+            <div class="note" style="margin-top:6px">LINK: https://... (senin affiliate linkin)</div>
+          </div>
+          <div class="box" style="margin:0">
+            <b>İpucu</b>
+            <div class="note" style="margin-top:6px">En çok kazandıran sayfalar: “En iyi bütçe laptoplar” ve “i5 vs Ryzen 5”.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="affGrid">
+        <div class="card aff">
+          <div class="img" style="background-image:
+            linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65)),
+            url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=70')"></div>
+          <b>Bütçe Laptop (Genel Liste)</b>
+          <span>En yüksek dönüşüm: liste içerikleri</span><br>
+          <a id="aff1" href="https://example.com" rel="nofollow sponsored" target="_blank">Affiliate Link</a>
+          <div class="note" style="margin-top:8px">LINK: <span class="muted" id="aff1t">https://example.com</span></div>
+        </div>
+
+        <div class="card aff">
+          <div class="img" style="background-image:
+            linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65)),
+            url('https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1200&q=70')"></div>
+          <b>Mouse + Klavye</b>
+          <span>Ucuz ekipmanlar çok satılır</span><br>
+          <a id="aff2" href="https://example.com" rel="nofollow sponsored" target="_blank">Affiliate Link</a>
+          <div class="note" style="margin-top:8px">LINK: <span class="muted" id="aff2t">https://example.com</span></div>
+        </div>
+
+        <div class="card aff">
+          <div class="img" style="background-image:
+            linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65)),
+            url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=1200&q=70')"></div>
+          <b>SSD Yükseltme</b>
+          <span>Okuma/yazma hızı → güçlü niş</span><br>
+          <a id="aff3" href="https://example.com" rel="nofollow sponsored" target="_blank">Affiliate Link</a>
+          <div class="note" style="margin-top:8px">LINK: <span class="muted" id="aff3t">https://example.com</span></div>
+        </div>
+
+        <div class="card aff">
+          <div class="img" style="background-image:
+            linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65)),
+            url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=70')"></div>
+          <b>Çanta + Laptop Stand</b>
+          <span>Öğrenci alışverişi: pratik ürünler</span><br>
+          <a id="aff4" href="https://example.com" rel="nofollow sponsored" target="_blank">Affiliate Link</a>
+          <div class="note" style="margin-top:8px">LINK: <span class="muted" id="aff4t">https://example.com</span></div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:16px;margin-top:14px">
+        <div class="kicker">Tek Tıkla Düzenleme</div>
+        <p class="muted" style="margin:8px 0 10px">
+          Aşağıdaki alana 4 affiliate linkini sırayla yapıştır (her satır bir link). Sonra “Uygula”.
+        </p>
+        <textarea id="bulkLinks" placeholder="Satır 1: Laptop liste linkin&#10;Satır 2: Mouse/Klavye linkin&#10;Satır 3: SSD linkin&#10;Satır 4: Çanta/Stand linkin"></textarea>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;align-items:center">
+          <button class="smallBtn" onclick="applyLinks()">Uygula</button>
+          <button class="copyBtn" onclick="copyHow()">Linkleri nereye koyacağım?</button>
+          <span class="hint" id="linkMsg"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="karsilastir" class="section">
+      <div class="titleRow">
+        <h2>Karşılaştırma (dönüşüm sayfası)</h2>
+        <div class="hint">Bu bölüm satışa en yakın arama niyetini hedefler.</div>
+      </div>
+
+      <div class="card" style="padding:16px">
+        <div class="kicker">i5 mi Ryzen 5 mi?</div>
+        <h3 style="margin:6px 0 6px">Öğrenci için hangisi daha mantıklı?</h3>
+        <p class="muted" style="margin:0">
+          Genel kural: aynı sınıftaki i5 ve Ryzen 5 işlemciler çoğu öğrenci için yeterli.
+          Seçimi; <b>pil</b>, <b>ısınma</b>, <b>fiyat</b> ve <b>ekran</b> gibi toplam paket belirler.
+        </p>
+
+        <table aria-label="i5 vs Ryzen 5 karşılaştırma">
+          <thead>
+            <tr>
+              <th>Kriter</th>
+              <th>i5 (genel)</th>
+              <th>Ryzen 5 (genel)</th>
+              <th>Not</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Günlük kullanım</b></td>
+              <td class="ok">Çok iyi</td>
+              <td class="ok">Çok iyi</td>
+              <td>Office, ders, tarayıcı, kodlama.</td>
+            </tr>
+            <tr>
+              <td><b>Pil / verimlilik</b></td>
+              <td class="warn">Modele bağlı</td>
+              <td class="warn">Modele bağlı</td>
+              <td>Asıl fark laptop tasarımında (batarya/ekran).</td>
+            </tr>
+            <tr>
+              <td><b>Oyun / grafik</b></td>
+              <td class="warn">Değişir</td>
+              <td class="warn">Değişir</td>
+              <td>Harici ekran kartı varsa daha önemli.</td>
+            </tr>
+            <tr>
+              <td><b>Fiyat/performans</b></td>
+              <td class="score">★★★★☆</td>
+              <td class="score">★★★★☆</td>
+              <td>Kampanyaya göre karar ver.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mini">
+          <span class="tag ok">Satışa yakın içerik</span>
+          <span class="tag">Örnek başlık: “i5 mi Ryzen 5 mi?”</span>
+          <span class="tag">CTA: “Önerilen modeller”</span>
+        </div>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn primary" href="#oneriler" onclick="scrollToId('oneriler')">Önerilen modeller (linkler)</a>
+          <a class="btn" href="#rehberler" onclick="scrollToId('rehberler')">Rehberleri oku</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="rehberler" class="section">
+      <div class="titleRow">
+        <h2>5 hazır içerik (özgün metin)</h2>
+        <div class="hint">Bunlar yayın için hazır. İstersen her birini ayrı sayfa yapabilirsin.</div>
+      </div>
+
+      <div class="content">
+        <div class="card postList">
+          <div class="post" data-tags="liste,affiliate,laptop" onclick="openArticle('a1')">
+            <small>🛒 Liste • Affiliate</small>
+            <b>2026 Öğrenci İçin En İyi Bütçe Laptoplar (F/P)</b>
+            <div class="hint">Ne almalı, nelere dikkat etmeli, kısa seçim rehberi.</div>
+            <div class="row"><span class="pill2 y">Okumak için tıkla</span><span class="pill2">8–10 dk</span></div>
+          </div>
+
+          <div class="post" data-tags="karsilastirma,affiliate" onclick="openArticle('a2')">
+            <small>⚔️ Karşılaştırma • Affiliate</small>
+            <b>i5 mi Ryzen 5 mi? Öğrenci için hangisi?</b>
+            <div class="hint">Gerçek kullanım senaryoları ile karar.</div>
+            <div class="row"><span class="pill2 y">Okumak için tıkla</span><span class="pill2">6–8 dk</span></div>
+          </div>
+
+          <div class="post" data-tags="rehber,seo" onclick="openArticle('a3')">
+            <small>📈 Rehber • SEO</small>
+            <b>8 GB mı 16 GB mı? Öğrenci için RAM seçimi</b>
+            <div class="hint">Hangi bölüm için ne gerekir?</div>
+            <div class="row"><span class="pill2 y">Okumak için tıkla</span><span class="pill2">5–7 dk</span></div>
+          </div>
+
+          <div class="post" data-tags="rehber,ssd" onclick="openArticle('a4')">
+            <small>💾 Rehber</small>
+            <b>SSD seçimi: 256/512 GB ve hızlar ne demek?</b>
+            <div class="hint">Kafa karıştıran terimleri sade anlattık.</div>
+            <div class="row"><span class="pill2 y">Okumak için tıkla</span><span class="pill2">6–8 dk</span></div>
+          </div>
+
+          <div class="post" data-tags="aksesuar,affiliate" onclick="openArticle('a5')">
+            <small>🎒 Aksesuar • Affiliate</small>
+            <b>Öğrenci için 7 uygun fiyatlı laptop ekipmanı</b>
+            <div class="hint">Çanta, stand, mouse, çoklayıcı ve daha fazlası.</div>
+            <div class="row"><span class="pill2 y">Okumak için tıkla</span><span class="pill2">5–6 dk</span></div>
+          </div>
+
+          <div class="adslot">✅ Reklam Alanı (demo): İçerik aralarına AdSense bloğu ekleyebilirsin.</div>
+        </div>
+
+        <aside class="card sidebar">
+          <div class="box">
+            <h4>🔎 İçerik Ara</h4>
+            <p>Örn: “ram”, “ssd”, “i5”, “laptop”</p>
+            <div class="searchRow">
+              <input id="q" placeholder="Ara..." />
+              <button class="smallBtn" onclick="filterPosts()">Ara</button>
+            </div>
+          </div>
+
+          <div class="box">
+            <h4>🎯 7 Günlük Başlangıç Planı</h4>
+            <p>
+              Gün 1: Bu siteyi yayınla<br>
+              Gün 2: “Bütçe laptop” yazısı<br>
+              Gün 3: “i5 vs Ryzen 5” yazısı<br>
+              Gün 4: “RAM seçimi” yazısı<br>
+              Gün 5: “SSD seçimi” yazısı<br>
+              Gün 6: “Aksesuar listesi”<br>
+              Gün 7: İç link + küçük güncelleme
+            </p>
+          </div>
+
+          <div class="box">
+            <h4>✅ Güven Sayfaları</h4>
+            <p>Gizlilik • Çerez • Affiliate açıklaması • Sorumluluk Reddi</p>
+          </div>
+
+          <div class="box" id="yayina">
+            <h4>🚀 Yayınlama (en kolay)</h4>
+            <p>
+              <b>Netlify:</b> site klasörünü sürükle-bırak → link hazır.<br>
+              <b>GitHub Pages:</b> repo aç → yükle → Pages aç.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="adsense" class="section">
+      <div class="titleRow">
+        <h2>AdSense alanları (hazır yerler)</h2>
+        <div class="hint">AdSense kodunu alınca buraya eklersin.</div>
+      </div>
+
+      <div class="grid">
+        <div class="card tile">
+          <div class="kicker">Üst Reklam</div>
+          <h3>Hero altı reklam alanı</h3>
+          <p>En görünür yer. Kodu eklemen yeterli.</p>
+          <div class="mini"><span class="tag">Görünürlük</span><span class="tag">CTR</span></div>
+        </div>
+
+        <div class="card tile">
+          <div class="kicker">İçerik Arası</div>
+          <h3>Rehberler arasında reklam</h3>
+          <p>Okuyan kullanıcıda iyi performans verir.</p>
+          <div class="mini"><span class="tag">Okuma trafiği</span><span class="tag">RPM</span></div>
+        </div>
+
+        <div class="card tile">
+          <div class="kicker">Footer</div>
+          <h3>Alt reklam alanı</h3>
+          <p>Sayfa sonu gösterimi artar.</p>
+          <div class="mini"><span class="tag">Gösterim</span><span class="tag">Basit</span></div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:16px;margin-top:14px">
+        <div class="adslot">✅ AdSense Kodu (demo): AdSense panelinden aldığın script/ins etiketi buraya eklenecek.</div>
+        <div class="note" style="margin-top:8px">
+          Not: Onay süreci için özgün içerik, sayfa yapısı, politika uyumu ve kullanıcı deneyimi önemlidir.
+        </div>
+
+        <!--
+          AdSense örnek yerleştirme (kendi kodunu buraya koyarsın):
+
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXX"
+              crossorigin="anonymous"></script>
+
+          <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-XXXX"
+              data-ad-slot="YYYY"
+              data-ad-format="auto"
+              data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerGrid">
+        <div class="legal">
+          <b style="color:#fff">ÖğrenciLaptop</b>
+          <div class="note">Bu site şablondur. Gelir; trafik, içerik ve link optimizasyonuna göre değişir.</div>
+          <div style="margin-top:10px" class="note">
+            Sayfalar:
+            <a href="javascript:void(0)" onclick="openModal('Gizlilik Politikası')">Gizlilik</a> •
+            <a href="javascript:void(0)" onclick="openModal('Çerez Politikası')">Çerez</a> •
+            <a href="javascript:void(0)" onclick="openModal('Affiliate Açıklaması')">Affiliate</a> •
+            <a href="javascript:void(0)" onclick="openModal('Sorumluluk Reddi')">Sorumluluk</a>
+          </div>
+        </div>
+        <div>
+          <div class="adslot">✅ Reklam Alanı (demo): Footer reklam bölgesi</div>
+          <div class="note" style="margin-top:10px">© <span id="y"></span> — Tüm hakları saklıdır.</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Article Modal -->
+  <div id="modal" class="modalOverlay">
+    <div class="card modalBody">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+        <b id="modalTitle">Başlık</b>
+        <button class="btn" onclick="closeModal()">Kapat</button>
+      </div>
+      <div id="modalBody" class="hint" style="margin-top:10px;white-space:pre-wrap"></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+        <a class="btn primary" href="#oneriler" onclick="closeModal();scrollToId('oneriler')">Öneri linklerine git</a>
+        <a class="btn" href="#adsense" onclick="closeModal();scrollToId('adsense')">AdSense alanları</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mini helper modal -->
+  <div id="toast" style="position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:140;display:none">
+    <div class="card" style="padding:10px 12px;border-radius:14px;background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.14)">
+      <b id="toastText" style="font-size:13px">Kopyalandı</b>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id)=>document.getElementById(id);
+    function scrollToId(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
+
+    // İçerik arama
+    function filterPosts(){
+      const q = ($('q').value || '').toLowerCase().trim();
+      const posts = document.querySelectorAll('.post');
+      posts.forEach(p=>{
+        const tags = (p.getAttribute('data-tags')||'').toLowerCase();
+        const text = (p.innerText||'').toLowerCase();
+        const show = !q || tags.includes(q) || text.includes(q);
+        p.style.display = show ? '' : 'none';
+      });
+    }
+
+    // Affiliate linklerini toplu uygulama
+    function setAff(id, url){
+      const a = $(id);
+      const t = $(id+'t');
+      if(!a || !t) return;
+      a.href = url;
+      t.textContent = url;
+    }
+
+    function applyLinks(){
+      const lines = ($('bulkLinks').value || '').split('\n').map(s=>s.trim()).filter(Boolean);
+      if(lines.length < 1){
+        $('linkMsg').textContent = "En az 1 link gir.";
+        return;
+      }
+      if(lines[0]) setAff('aff1', lines[0]);
+      if(lines[1]) setAff('aff2', lines[1]);
+      if(lines[2]) setAff('aff3', lines[2]);
+      if(lines[3]) setAff('aff4', lines[3]);
+      $('linkMsg').textContent = "✅ Linkler uygulandı. Dosyayı kaydetmeyi unutma (Ctrl+S).";
+      showToast("✅ Linkler uygulandı");
+    }
+
+    function copyHow(){
+      const text = "Affiliate linkleri ekleme:\n\n1) Satış ortaklığı hesabından ürün/arama sayfası linki al.\n2) Bu sitede 'Öneriler' bölümündeki LINK alanlarına yapıştır.\n3) Karttaki buton artık senin linkine gider.\n\nİpucu: İlk linki 'Bütçe Laptop Listesi' yap — en çok kazandırır.";
+      navigator.clipboard?.writeText(text).then(()=>showToast("Kopyalandı")).catch(()=>alert(text));
+    }
+
+    // Makale modalı
+    const articles = {
+      a1: {
+        title: "2026 Öğrenci İçin En İyi Bütçe Laptoplar (F/P)",
+        body:
+`Bütçe laptop seçerken “işlemci modeli” kadar önemli olan şey toplam pakettir: ekran, pil, ağırlık, klavye ve soğutma.
+
+✅ Hızlı seçim kuralları
+• Ders + Office + internet: 8 GB RAM minimum, mümkünse 16 GB.
+• SSD: 512 GB daha rahat; 256 GB çabuk dolar.
+• Ekran: IPS/benzeri panel ve mat ekran avantajlı.
+• Ağırlık: 1.4–1.8 kg arası öğrenci için ideal.
+
+🎯 Hangi bölüme ne uygun?
+• Sözel/işletme/üniversite genel: i5 / Ryzen 5 sınıfı + 16 GB RAM hedefle.
+• Yazılım: 16 GB RAM + 512 GB SSD daha konforlu.
+• Tasarım (hafif): 16 GB RAM + iyi ekran; mümkünse harici GPU seçenekleri.
+
+🛒 Para kazandıran içerik taktiği
+Bu yazının sonuna “Önerilen bütçe laptop listesi” butonu koy (aşağıdaki öneri linklerine bağla).
+Kullanıcı zaten satın almaya yakındır → affiliate dönüşümü artar.
+
+Aşağıdan “Öneriler” bölümüne gidip affiliate linklerini ekle.`
+      },
+      a2: {
+        title: "i5 mi Ryzen 5 mi? Öğrenci için hangisi?",
+        body:
+`Kısa cevap: İkisi de uygunsa, “fiyat + pil + ısınma + ekran” paketi daha önemli.
+
+✅ Karar verirken şu 4 soruyu sor:
+1) Pil benim için kritik mi? → daha büyük batarya ve verimli ekran seç.
+2) Laptop ısınıyor mu? → ince kasa bazen ısınır; yorumlara bak.
+3) Ekran iyi mi? → IPS/mat ekran uzun çalışmada rahat.
+4) RAM yükseltilebiliyor mu? → yükseltilebilir olması büyük avantaj.
+
+🔎 Satışa yakın anahtar kelimeler
+• “i5 mi ryzen 5 mi öğrenci”
+• “i5 ryzen 5 karşılaştırma”
+• “bütçe laptop i5 ryzen”
+
+CTA (satış butonu):
+• “Önerilen modelleri gör” → Öneriler bölümüne bağla.`
+      },
+      a3: {
+        title: "8 GB mı 16 GB mı? Öğrenci için RAM seçimi",
+        body:
+`RAM, aynı anda kaç iş yapabileceğini belirler. Tarayıcı sekmeleri + Office + Zoom derken 8 GB hızlı dolabilir.
+
+✅ Pratik öneri
+• Minimum: 8 GB (çok dikkatli kullanım)
+• Rahat kullanım: 16 GB (önerilen)
+• Ağır kullanım: 32 GB (tasarım/çoklu sanal makine vs.)
+
+🎓 Bölümlere göre
+• Genel öğrenci: 16 GB hedefle.
+• Yazılım: 16 GB çoğu zaman yeter; bütçe varsa 32 GB konfor.
+• Tasarım: 16 GB minimum; proje büyüdükçe artar.
+
+💡 Para kazandıran bağlantı
+Bu yazının altına “RAM yükseltme / uygun RAM kitleri” affiliate linki ekleyebilirsin (eğer program izin veriyorsa).
+Ayrıca “SSD seçimi” yazısına iç link ver.`
+      },
+      a4: {
+        title: "SSD seçimi: 256/512 GB ve hızlar ne demek?",
+        body:
+`SSD, sistem hızını en çok etkileyen parçadır. “Laptop yavaş” şikayetlerinin çoğu SSD/RAM kaynaklıdır.
+
+✅ Kapasite önerisi
+• 256 GB: temel kullanım (çabuk dolar)
+• 512 GB: çoğu öğrenci için ideal
+• 1 TB: arşiv/oyun/video için
+
+⚡ NVMe mi SATA mı?
+• NVMe genelde daha hızlıdır.
+• Ama günlük kullanımda fark “hissettirir”, fakat mucize bekleme.
+Asıl fark: “SSD var mı yok mu?” ve kapasite.
+
+🛒 Dönüşüm taktiği
+Bu içeriğin sonuna “SSD yükseltme önerileri” kartını koy (Öneriler bölümündeki SSD linkine bağla).`
+      },
+      a5: {
+        title: "Öğrenci için 7 uygun fiyatlı laptop ekipmanı",
+        body:
+`Ucuz ama işe yarayan ekipmanlar, öğrencilerin en çok satın aldığı kategoridir (affiliate için çok iyi).
+
+1) Laptop çantası (koruma + taşıma)
+2) Kablosuz mouse
+3) Mouse pad
+4) Laptop stand (ergonomi)
+5) USB çoklayıcı (hub)
+6) Kulaklık (ders/online)
+7) Soğutucu (gerekliyse)
+
+✅ Satış taktiği
+Bu listeyi “öneri kartları” ile eşleştir.
+Kullanıcı: “tamam alayım” dediğinde tek tıkla alışverişe gider.`
+      }
+    };
+
+    function openArticle(key){
+      const a = articles[key];
+      if(!a) return;
+      $('modalTitle').textContent = a.title;
+      $('modalBody').textContent = a.body;
+      $('modal').style.display = "grid";
+    }
+    function closeModal(){ $('modal').style.display = "none"; }
+
+    function openModal(title){
+      $('modalTitle').textContent = title;
+      const bodies = {
+        "Gizlilik Politikası": "Bu site şablondur.\n\n• İletişim verileri yalnızca geri dönüş amacıyla kullanılır.\n• Üçüncü taraf servisler (AdSense/Analytics) eklersen, onların gizlilik politikaları geçerli olabilir.\n• Gerçek kullanımda metinleri güncel tutmanız önerilir.",
+        "Çerez Politikası": "Bu şablonda zorunlu çerez kullanılmaz.\n\nAdSense/Analytics gibi servisler eklendiğinde çerezler devreye girebilir. Kullanıcılara bilgilendirme yapın.",
+        "Affiliate Açıklaması": "Bu sayfada satış ortaklığı (affiliate) linkleri bulunabilir.\n\n• Linklerden alışveriş yapılırsa komisyon kazanılabilir.\n• Kullanıcı fiyatı değişmez.\n• Linkler 'sponsored/nofollow' olarak işaretlenmiştir.",
+        "Sorumluluk Reddi": "Bu sitedeki bilgiler genel bilgilendirme amaçlıdır.\n\n• Fiyatlar, stoklar ve ürün özellikleri değişebilir.\n• Satın almadan önce satıcı sayfasındaki bilgileri kontrol edin."
+      };
+      $('modalBody').textContent = bodies[title] || "";
+      $('modal').style.display = "grid";
+    }
+
+    function showToast(text){
+      $('toastText').textContent = text;
+      $('toast').style.display = "block";
+      setTimeout(()=> $('toast').style.display="none", 2200);
+    }
+
+    $('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
