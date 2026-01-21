@@ -1,1 +1,1 @@
-# www.-rencilapto.com
+# www.-ogrenc,laptop.com
